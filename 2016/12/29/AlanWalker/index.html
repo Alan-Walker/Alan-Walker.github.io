@@ -8,7 +8,10 @@
   <meta name="description" content="安装 Hexo所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
 1$ npm install -g hexo-cli
 Hexo 建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &amp;lt;folder&amp;gt;  $ cd &amp;lt;folder&amp;gt;  $ npm install
-创建文章网站配置网站的配置信息在">
+创建文章
+新建一篇文章
+
+1$ h">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何使用 Hexo 创建自己的博客">
 <meta property="og:url" content="http://Alan-Walker.github.io/2016/12/29/AlanWalker/index.html">
@@ -16,14 +19,20 @@ Hexo 建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定�
 <meta property="og:description" content="安装 Hexo所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
 1$ npm install -g hexo-cli
 Hexo 建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &amp;lt;folder&amp;gt;  $ cd &amp;lt;folder&amp;gt;  $ npm install
-创建文章网站配置网站的配置信息在">
-<meta property="og:updated_time" content="2016-12-29T08:13:05.081Z">
+创建文章
+新建一篇文章
+
+1$ h">
+<meta property="og:updated_time" content="2016-12-29T09:00:06.719Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用 Hexo 创建自己的博客">
 <meta name="twitter:description" content="安装 Hexo所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
 1$ npm install -g hexo-cli
 Hexo 建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &amp;lt;folder&amp;gt;  $ cd &amp;lt;folder&amp;gt;  $ npm install
-创建文章网站配置网站的配置信息在">
+创建文章
+新建一篇文章
+
+1$ h">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -101,9 +110,36 @@ Hexo 建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定�
         <h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
 <h2 id="Hexo-建站"><a href="#Hexo-建站" class="headerlink" title="Hexo 建站"></a>Hexo 建站</h2><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;  </div><div class="line">$ cd &lt;folder&gt;  </div><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
-<h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><h2 id="网站配置"><a href="#网站配置" class="headerlink" title="网站配置"></a>网站配置</h2><p>网站的配置信息在 <strong>_config.yml</strong> 文件中，您可以在此配置大部分的参数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">title: Hexo</div><div class="line">subtitle: AlanWalker</div><div class="line">description: 少年回头望，笑我还不快跟上。</div><div class="line">author: AlanWalker</div><div class="line">language: zh-CN</div><div class="line">...</div><div class="line">#设置 Hexo 主题</div><div class="line">theme: next</div></pre></td></tr></table></figure></p>
-<p>同时如果你是使用 <strong>github</strong> 作为服务器的话，必须在 <strong>_config.yml</strong> 文件中配置github的相关信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">url: http://Alan-Walker.github.io</div><div class="line">...</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  #Alan-Walker改为你的github用户名</div><div class="line">  repository: https://github.com/Alan-Walker/Alan-Walker.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><ul>
+<li>新建一篇文章</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;Hello World&quot;</div></pre></td></tr></table></figure>
+<p>在 <strong>/source/_post</strong> 里添加 <strong>hello-world.md</strong> 文件，之后新建的文章都将存放在此目录下。<br>文章使用的是MarkDown 语法，编辑之后保存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: AlanWalker</div><div class="line">date: 2016-12-29 15:41:35</div><div class="line">tags: Tool</div><div class="line">---</div><div class="line">正文</div></pre></td></tr></table></figure>
+<ul>
+<li>生成本地静态网站</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<ul>
+<li>启动Hexo服务器</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>现在在浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ，可以看到生成的静态网站，使用的主题是默认的 <strong>landscape</strong></p>
+<h2 id="关联Github"><a href="#关联Github" class="headerlink" title="关联Github"></a>关联Github</h2><p>到目前为止，网站只能在本地访问，要想发布到互联网，可以使用Github作为仓库</p>
+<ul>
+<li>创建版本库<br>要使用github作为服务器，首先去 github 创建一个新的版本库，Repository name 必须为  <strong>yourname.github.io</strong> (yourname与你的注册用户名一致,这个就是你博客的域名)</li>
+<li><p>关联Hexo<br>在 <strong>_config.yml</strong> 文件中配置github的相关信息（yourname改为你的github用户名）</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">url: http://yourname.github.io</div><div class="line">...</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/yourname/yourname.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装Git 部署插件</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<ul>
+<li>发布到Github</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>执行部署命令的时候会要求你输入github的账户名称和密码（透明的）。<br>稍等片刻，就可以使用通过 <a href="http://yourname.github.io" target="_blank" rel="external">http://yourname.github.io</a> 你的部署的网站。</p>
 
       
     </div>
