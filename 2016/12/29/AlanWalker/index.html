@@ -97,18 +97,21 @@
 
 
 <meta name="description" content="安装 HexoHexo安装和搭建依赖 Nodejs 和 Git，可自行下载。所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
-1$ npm install -g hexo-cli">
+1$ npm install -g hexo-cli
+Hexo 建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &amp;lt;folder&amp;gt;  $ cd &amp;lt;folder&amp;gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 博客创建记录">
 <meta property="og:url" content="http://Alan-Walker.github.io/2016/12/29/AlanWalker/index.html">
 <meta property="og:site_name" content="AlanWalker's Blog">
 <meta property="og:description" content="安装 HexoHexo安装和搭建依赖 Nodejs 和 Git，可自行下载。所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
-1$ npm install -g hexo-cli">
-<meta property="og:updated_time" content="2016-12-29T10:31:19.808Z">
+1$ npm install -g hexo-cli
+Hexo 建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &amp;lt;folder&amp;gt;  $ cd &amp;lt;folder&amp;gt;">
+<meta property="og:updated_time" content="2016-12-30T01:39:23.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 博客创建记录">
 <meta name="twitter:description" content="安装 HexoHexo安装和搭建依赖 Nodejs 和 Git，可自行下载。所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
-1$ npm install -g hexo-cli">
+1$ npm install -g hexo-cli
+Hexo 建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &amp;lt;folder&amp;gt;  $ cd &amp;lt;folder&amp;gt;">
 
 
 
@@ -374,23 +377,21 @@
       
         <h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><p>Hexo安装和搭建依赖 <a href="https://nodejs.org/en/" target="_blank" rel="external">Nodejs</a> 和 <a href="https://git-scm.com/" target="_blank" rel="external">Git</a>，可自行下载。<br>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<a id="more"></a>
 <h2 id="Hexo-建站"><a href="#Hexo-建站" class="headerlink" title="Hexo 建站"></a>Hexo 建站</h2><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;  </div><div class="line">$ cd &lt;folder&gt;  </div><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
 <h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><ul>
-<li>新建一篇文章</li>
+<li><p>新建一篇文章</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;Hello World&quot;</div></pre></td></tr></table></figure>
+<p>  在 <strong>/source/_post</strong> 里添加 <strong>hello-world.md</strong> 文件，之后新建的文章都将存放在此目录下。<br>  文章使用的是MarkDown 语法，编辑之后保存</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: 标题</div><div class="line">date: 2016-12-29 15:41:35</div><div class="line">tags: 标签</div><div class="line">---</div><div class="line">正文</div></pre></td></tr></table></figure>
+</li>
+<li><p>生成本地静态网站</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+</li>
+<li><p>启动Hexo服务器</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>  现在在浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ，可以看到生成的静态网站，使用的主题是默认的 <strong>landscape</strong></p>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;Hello World&quot;</div></pre></td></tr></table></figure>
-<p>在 <strong>/source/_post</strong> 里添加 <strong>hello-world.md</strong> 文件，之后新建的文章都将存放在此目录下。<br>文章使用的是MarkDown 语法，编辑之后保存</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: AlanWalker</div><div class="line">date: 2016-12-29 15:41:35</div><div class="line">tags: Tool</div><div class="line">---</div><div class="line">正文</div></pre></td></tr></table></figure>
-<ul>
-<li>生成本地静态网站</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<ul>
-<li>启动Hexo服务器</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>现在在浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ，可以看到生成的静态网站，使用的主题是默认的 <strong>landscape</strong></p>
 <h2 id="关联Github"><a href="#关联Github" class="headerlink" title="关联Github"></a>关联Github</h2><p>到目前为止，网站只能在本地访问，要想发布到互联网，可以使用Github作为仓库</p>
 <ul>
 <li>创建版本库<br>要使用github作为服务器，首先去 github 创建一个新的版本库，Repository name 必须为  <strong>yourname.github.io</strong> (yourname与你的注册用户名一致,这个就是你博客的域名)</li>
@@ -398,26 +399,26 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">url: http://yourname.github.io</div><div class="line">...</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: git@github.com:yourname/yourname.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 </li>
 <li><p>安装Git 部署插件</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+</li>
+<li><p>发布到Github</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>  执行部署命令的时候会要求你输入github的账户名称和密码（透明的）。<br>  稍等片刻，就可以使用通过 <a href="http://yourname.github.io" target="_blank" rel="external">http://yourname.github.io</a> 访问你部署的网站。</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<ul>
-<li>发布到Github</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>执行部署命令的时候会要求你输入github的账户名称和密码（透明的）。<br>稍等片刻，就可以使用通过 <a href="http://yourname.github.io" target="_blank" rel="external">http://yourname.github.io</a> 访问你部署的网站。</p>
 <h2 id="使用流程"><a href="#使用流程" class="headerlink" title="使用流程"></a>使用流程</h2><p>当按照上面步骤配置完成之后，再次发布文章就可以通过以下步骤快速发布文章</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;Hello World&quot;</div><div class="line">$ hexo generate</div><div class="line"># 本地预览，非必须</div><div class="line">$ hexo server</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <h2 id="网站配置"><a href="#网站配置" class="headerlink" title="网站配置"></a>网站配置</h2><p>网站的配置信息在 <strong>_config.yml</strong> 文件中，可以在此配置大部分的参数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">title: Hexo</div><div class="line">subtitle: AlanWalker</div><div class="line">description: 少年回头望，笑我还不快跟上。</div><div class="line">author: AlanWalker</div><div class="line">language: zh-CN</div><div class="line">...</div><div class="line">#设置 Hexo 主题</div><div class="line">theme: landscape</div></pre></td></tr></table></figure></p>
 <h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>使用NexT主题让站点更酷炫</p>
 <ul>
-<li>下载<br>从Next的Gihub仓库中获取最新版本。</li>
+<li><p>下载<br>  从Next的Gihub仓库中获取最新版本。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd your-hexo-site</div><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置<br>  在 <strong>_config.yml</strong> 文件中修改主题</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: next</div></pre></td></tr></table></figure>
+<p>  在切换主题之后、验证之前， 我们最好使用 hexo clean 来清除 Hexo 的缓存。</p>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd your-hexo-site</div><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
-<ul>
-<li>配置<br>在 <strong>_config.yml</strong> 文件中修改主题</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: next</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -446,6 +447,22 @@
         </div>
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/03/单例模式/" rel="prev" title="单例模式">
+                单例模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -512,7 +529,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -521,7 +538,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -530,7 +547,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -586,7 +603,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
