@@ -96,7 +96,7 @@
 
 
 
-<meta name="description" content="单例模式单例模式是用来保证某个类在运行期间只会被创建一个类实例，同时提供一个全局唯一访问这个类实例的访问点，getInstance方法。实现单例模式有两种方式：
+<meta name="description" content="单例模式是用来保证某个类在运行期间只会被创建一个类实例，同时提供一个全局唯一访问这个类实例的访问点，getInstance方法。实现单例模式有两种方式：
 
 饿汉式
 
@@ -109,7 +109,7 @@
 <meta property="og:title" content="单例模式">
 <meta property="og:url" content="http://Alan-Walker.github.io/2017/01/03/单例模式/index.html">
 <meta property="og:site_name" content="AlanWalker's Blog">
-<meta property="og:description" content="单例模式单例模式是用来保证某个类在运行期间只会被创建一个类实例，同时提供一个全局唯一访问这个类实例的访问点，getInstance方法。实现单例模式有两种方式：
+<meta property="og:description" content="单例模式是用来保证某个类在运行期间只会被创建一个类实例，同时提供一个全局唯一访问这个类实例的访问点，getInstance方法。实现单例模式有两种方式：
 
 饿汉式
 
@@ -118,10 +118,10 @@
 懒汉式  
 
 1private static Singleton instance = null;">
-<meta property="og:updated_time" content="2017-01-03T03:03:47.970Z">
+<meta property="og:updated_time" content="2017-01-03T03:08:12.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单例模式">
-<meta name="twitter:description" content="单例模式单例模式是用来保证某个类在运行期间只会被创建一个类实例，同时提供一个全局唯一访问这个类实例的访问点，getInstance方法。实现单例模式有两种方式：
+<meta name="twitter:description" content="单例模式是用来保证某个类在运行期间只会被创建一个类实例，同时提供一个全局唯一访问这个类实例的访问点，getInstance方法。实现单例模式有两种方式：
 
 饿汉式
 
@@ -393,7 +393,7 @@
       
 
       
-        <h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><p>单例模式是用来保证某个类在运行期间只会被创建一个类实例，同时提供一个全局唯一访问这个类实例的访问点，getInstance方法。<br>实现单例模式有两种方式：</p>
+        <p>单例模式是用来保证某个类在运行期间只会被创建一个类实例，同时提供一个全局唯一访问这个类实例的访问点，getInstance方法。<br>实现单例模式有两种方式：</p>
 <ul>
 <li>饿汉式</li>
 </ul>
@@ -460,8 +460,8 @@
 <p>解决这个问题的方法就是，使用volatile关键字不允许2,3重排。 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">private volatile static Singleton instance = null;</div></pre></td></tr></table></figure>
 <p>在我们的印象中volatile的作用是：被volatile修饰的变量的值，将不会被本地线程缓存，所有对该变量的读写都是直接操作共享内存，从而确保多个线程能正确的处理该变量。从JDK5开始使用新的JSR-133内存模型规范，这个规范增强了volatile的语义，当声明对象的引用为 volatile后，“问题的根源”的三行伪代码中的2和3之间的重排序，在多线程环境中将会被禁止。</p>
-<h3 id="基于类加载的单例模式"><a href="#基于类加载的单例模式" class="headerlink" title="基于类加载的单例模式"></a>基于类加载的单例模式</h3><p>基于类加载的单例模式实际是饿汉式和懒汉式的综合。由JVM来保证线程的安全性，如恶汉式单例，这种实现方式，会在类装载的时候就初始化对象，有可能浪费一定的内存。这里使用的是静态内部类的方式，该内部类的实例与外部类的实例没有绑定关系，而且只有被调用时才会装载，跟懒汉式类似，实现了延迟加载。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line"></div><div class="line">    private static class SingletonHolder&#123;</div><div class="line">        /**</div><div class="line">         * 静态初始化器，由JVM来保证线程安全</div><div class="line">         */</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance()&#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h4 id="拓展阅读"><a href="#拓展阅读" class="headerlink" title="拓展阅读"></a>拓展阅读</h4><p><a href="http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization" target="_blank" rel="external">http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization</a></p>
+<h3 id="基于静态内部类"><a href="#基于静态内部类" class="headerlink" title="基于静态内部类"></a>基于静态内部类</h3><p>基于静态内部类单例模式实际是饿汉式和懒汉式的综合。由JVM来保证线程的安全性，如恶汉式单例，这种实现方式，会在类装载的时候就初始化对象，有可能浪费一定的内存。这里使用的是静态内部类的方式，该内部类的实例与外部类的实例没有绑定关系，而且只有被调用时才会装载，跟懒汉式类似，实现了延迟加载。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line"></div><div class="line">    private static class SingletonHolder&#123;</div><div class="line">        /**</div><div class="line">         * 静态初始化器，由JVM来保证线程安全</div><div class="line">         */</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance()&#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="拓展阅读"><a href="#拓展阅读" class="headerlink" title="拓展阅读"></a>拓展阅读</h3><p><a href="http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization" target="_blank" rel="external">http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization</a></p>
 
       
     </div>
@@ -625,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#单例模式"><span class="nav-number">1.</span> <span class="nav-text">单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#饿汉式"><span class="nav-number">1.1.</span> <span class="nav-text">饿汉式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#懒汉式"><span class="nav-number">1.2.</span> <span class="nav-text">懒汉式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如何实现懒汉式的线程安全？"><span class="nav-number">1.2.1.</span> <span class="nav-text">如何实现懒汉式的线程安全？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于类加载的单例模式"><span class="nav-number">1.3.</span> <span class="nav-text">基于类加载的单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展阅读"><span class="nav-number">1.3.1.</span> <span class="nav-text">拓展阅读</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#饿汉式"><span class="nav-number">1.</span> <span class="nav-text">饿汉式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#懒汉式"><span class="nav-number">2.</span> <span class="nav-text">懒汉式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如何实现懒汉式的线程安全？"><span class="nav-number">2.1.</span> <span class="nav-text">如何实现懒汉式的线程安全？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于静态内部类"><span class="nav-number">3.</span> <span class="nav-text">基于静态内部类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展阅读"><span class="nav-number">4.</span> <span class="nav-text">拓展阅读</span></a></li></ol></div>
             
 
           </div>
